@@ -1,13 +1,13 @@
 import './Sidebar.css'
 
-import logo from './assets/logo.svg'
-import briefcase from './assets/briefcase.svg'
-import chevronsLeft from './assets/chevrons-left.svg'
+// import logo from './assets/logo.svg'
+// import briefcase from './assets/briefcase.svg'
+// import chevronsLeft from './assets/chevrons-left.svg'
 import arrowLeft from './assets/arrow-left-circle.svg'
 import arrowRight from './assets/arrow-right-circle.svg'
-import cloudDrizzle from './assets/cloud-drizzle.svg'
-import film from './assets/film.svg'
-import headphones from './assets/headphones.svg'
+// import cloudDrizzle from './assets/cloud-drizzle.svg'
+// import film from './assets/film.svg'
+// import headphones from './assets/headphones.svg'
 
 interface SidebarProps {
   isExpanded: boolean;
