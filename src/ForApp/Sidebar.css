@@ -1,0 +1,90 @@
+.app__sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  
+    background-color: var(--zodiacBlue);
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* When the sidebar is expanded (for mobile and tablet) */
+.app__sidebar.expanded {
+    left: 0;
+}
+
+.app__sidebar__logo {
+    height: 50px;
+    width: 100%;
+}
+
+.app__sidebar__dashboard {
+    height: 60px;
+    width: 100%;
+}
+
+.app__sidebar__spacer {
+    flex: 1;
+    width: 100%;
+}   
+
+.app__sidebar__menu__collapse {
+    height: 60px;
+    width: 100%;
+
+    /* background-color: lightgreen; */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .app__sidebar {
+        left: -250px;
+        transition: left 0.3s ease;
+    }
+
+    .app__sidebar.expanded {
+    left: 0;
+    }
+
+    .app__sidebar__menu__collapse {
+        display: flex;
+    }
+}
+  
+/* Tablet devices (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .app__sidebar {
+        width: 80px;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+
+    .app__sidebar.expanded {
+        width: 250px;
+    }
+
+    .app__sidebar__menu__collapse {
+        display: flex;
+    }
+}
+
+/* Desktop devices (1024px and above) */
+@media only screen and (min-width: 1024px) {
+    .app__sidebar {
+        width: 250px;
+        left: 0;
+        transition: none; /* No transition for desktop */
+    }
+
+    .app__sidebar__menu__collapse {
+        display: none;
+    }
+}

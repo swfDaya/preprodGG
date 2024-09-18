@@ -1,0 +1,94 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+}
+
+.app {
+  height: 100svh;
+  width: 100svw;
+
+  /* background-color: var(--antiWhite); */
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  height: 50px;
+  width: 100%;
+
+  background-color: var(--azureBlue);
+}
+
+.app__content {
+  flex: 1;
+
+  background-color: var(--squashYellow);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.app__sidebar {
+  height: 100%;
+
+  background-color: var(--zodiacBlue);
+}
+
+.app__footer {
+  height: 60px;
+  width: 100%;
+
+  background-color: var(--ultraRed);
+}
+
+/* Mobile devices (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .app {
+    background-color: aqua;
+  }
+
+  .app__footer {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .app__footer__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Tablet devices (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .app {
+    background-color: lightcoral;
+  }
+  
+  .app__footer {
+    display: none;
+  }
+
+  .app__sidebar {
+    width: 80px;
+  }
+}
+
+/* Desktop devices (1024px and above) */
+@media only screen and (min-width: 1024px) {
+  .app {
+    background-color: lightgreen;
+  }
+
+  .app__footer {
+    display: none;
+  }
+
+  .app__sidebar {
+    width: 250px;
+  }
+}
