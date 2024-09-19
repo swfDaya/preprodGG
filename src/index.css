@@ -1,6 +1,6 @@
 :root {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 
   --white: #ffffff;
   --ebonyClay: #2b2d42;
@@ -58,6 +58,11 @@
   --americanSilver: #D0D0D0;
   --charmPink: #c37892;
   --greenSheen: #78C3A9;
+
+  --antiFlashWhite: #F3F3F3;
+  --brightGray: #EBEBEB;
+  --taupeGray: #898989;
+  --chineseBlack: #091225;
 }
 
 * {

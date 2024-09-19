@@ -16,17 +16,16 @@ function App() {
 
   return (
     <div className='app'>
+      <div className='app__header'>
+        
+      </div>
       <div
-      className={`app__sidebar ${isExpanded ? 'expanded' : ''}`}
-      // onClick={() => setIsExpanded(!isExpanded)}
+      className='app__content'
       >
         <Sidebar 
         isExpanded={isExpanded} 
-        setIsExpanded={setIsExpanded} 
+        setIsExpanded={setIsExpanded}
         />
-      </div>
-      <div className='app__container'>
-
       </div>
       <div
       className='app__footer'

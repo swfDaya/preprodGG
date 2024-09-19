@@ -1,164 +1,149 @@
-.app__sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    z-index: 100;
-  
-    background-color: var(--zodiacBlue);
-
+.app__sidebar__content {
     display: flex;
     flex-direction: column;
-}
 
-/* When the sidebar is expanded (for mobile and tablet) */
-.app__sidebar.expanded {
-    left: 0;
-}
-
-.app__sidebar__logo {
-    height: 50px;
+    height: 100%;
     width: 100%;
 
-    display: flex;
-    align-items: center;
-
-    /* justify-content: center; */
-    padding-left: calc(40px - 12px);
-
-    border-bottom: 0.75px solid var(--santaGrey);
-
-    font-size: 1.1rem;
-    font-weight: bold;
+    /* background-color: tomato; */
 }
 
-.app__sidebar__logo__text {
-    /* padding-left: calc(40px - 12px); */
-    padding-left: 1rem;
+.app__sidebar__content__logo {
+    height: 100px;
+    width: 100%;
 
-    opacity: 0;
-    transition: opacity 0s ease;
+    /* background-color: lightgreen; */
 }
 
-.app__sidebar__logo__text.expanded {
-    opacity: 1;
-
-    transition: opacity 1s ease;
-}
-
-/* .app__sidebar__logo.expanded {
-    justify-content: left;
-    padding-left: calc(40px - 12px);
-} */
-
-.app__sidebar__dashboard, .app__sidebar__cloud__drizzle, .app__sidebar__film, .app__sidebar__headphones {
+.app__sidebar__content__briefcase {
     height: 60px;
     width: 100%;
+
+    background-color: lightpink;
+}
+
+.app__sidebar__content__cloud {
+    height: 60px;
+    width: 100%;
+
+    background-color: lightseagreen;
+}
+
+.app__sidebar__content__film {
+    height: 60px;
+    width: 100%;
+
+    background-color: lightpink;
+}
+
+.app__sidebar__content__headphones {
+    height: 60px;
+    width: 100%;
+
+    /* background-color: lightseagreen; */
 
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    padding-left: calc(40px - 12px);
+    justify-content: center;
 
     font-size: 1.1rem;
     font-weight: bold;
+    color: var(--taupeGray);
 }
 
-.app__sidebar__spacer {
+.app__sidebar__content__headphones.expanded {
+    justify-content: flex-start;
+    /* padding-left: 1rem; */
+}
+
+.app__sidebar__content__spacer {
     flex: 1;
     width: 100%;
-}   
+}
 
-.app__sidebar__menu__collapse {
+.app__sidebar__content__collapse {
     height: 60px;
     width: 100%;
 
-    /* background-color: lightgreen; */
+    /* background-color: lightblue; */
+
+    color: var(--chineseBlack);
+
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    border-top: 0.75px solid var(--santaGrey);
-
-    font-size: 1.1rem;
+    font-style: 1.1rem;
     font-weight: bold;
-}
-
-.app__sidebar__collapse__text {
-    /* padding-left: calc(40px - 12px); */
-    padding-left: 1rem;
-
-    width: 0px;
-
-    opacity: 0;
-    transition: opacity 0s ease;
-
-    padding: 0px;
-    margin: 0px;
-}
-
-.app__sidebar__collapse__text.expanded {
-    opacity: 1;
-
-    width: fit-content;
-
-    padding-left: 1rem;
-    transition: opacity 1s ease;
 }
 
 /* Mobile devices (up to 767px) */
 @media only screen and (max-width: 767px) {
-    .app__sidebar {
-        left: -250px;
-        transition: left 0.3s ease;
+    .app__sidebar__content__collapse__text {
+        opacity: 0;
+        /* width: 0%; */
+        /* padding-left: 1rem; */
+        transition: opacity 0s ease-in-out;
     }
-
-    .app__sidebar.expanded {
-    left: 0;
+    .app__sidebar__content__collapse__text.expanded {
+        opacity: 1;
+        width: fit-content;
+        padding-left: 1rem;
+        transition: opacity 1s ease-in-out;
     }
-
-    .app__sidebar__menu__collapse {
-        display: flex;
+    .app__sidebar__content__headphones > img {
+        padding-left: calc(40px - 12px);
+    }
+    .app__sidebar__content__headphones.expanded > img {
+        padding-left: calc(40px - 12px);
     }
 }
   
 /* Tablet devices (768px to 1023px) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .app__sidebar {
-        width: 80px;
-        left: 0;
-        transition: width 0.3s ease;
+    .app__sidebar__content__collapse__text {
+        opacity: 0;
+        width: 0%;
+        /* padding-left: 1rem; */
+        transition: all 0s ease-in-out;
     }
-
-    .app__sidebar.expanded {
-        width: 250px;
+    .app__sidebar__content__collapse__text.expanded {
+        opacity: 1;
+        width: fit-content;
+        padding-left: 1rem;
+        transition: opacity 1s ease-in-out;
     }
-
-    .app__sidebar__menu__collapse {
-        display: flex;
+    .app__sidebar__content__headphones.expanded > img {
+        padding-left: calc(40px - 12px);
     }
 }
 
 /* Desktop devices (1024px and above) */
 @media only screen and (min-width: 1024px) {
-    .app__sidebar {
-        width: 250px;
-        left: 0;
-        transition: none; /* No transition for desktop */
+    .app__sidebar__content__headphones {
+        justify-content: flex-start;
     }
-
-    .app__sidebar__menu__collapse {
+    .app__sidebar__content__headphones.expanded {
+        justify-content: flex-start;
+    }
+    .app__sidebar__content__headphones > img {
+        padding-left: calc(40px - 12px);
+    }
+    .app__sidebar__content__headphones.expanded > img {
+        padding-left: calc(40px - 12px);
+    }
+    .app__sidebar__content__collapse__text {
+        padding-left: 1rem;
+    }
+    .app__sidebar__content__collapse__text.expanded {
+        padding-left: 1rem;
+    }
+    .app__sidebar__content__collapse {
         display: none;
     }
-
-    .app__sidebar__logo__text {
-        opacity: 1;
-    }
-
-    .app__sidebar__collapse__text.expanded {
-        opacity: 0;
+    .app__sidebar__content__collapse.expanded {
+        display: none;
     }
 }

@@ -1,10 +1,9 @@
 import './Sidebar.css'
 
-import logo from './assets/logo.svg'
+// import logo from './assets/logo.svg'
 import briefcase from './assets/briefcase.svg'
-// import chevronsLeft from './assets/chevrons-left.svg'
 import arrowLeft from './assets/arrow-left-circle.svg'
-import arrowRight from './assets/arrow-right-circle.svg'
+// import arrowRight from './assets/arrow-right-circle.svg'
 import cloudDrizzle from './assets/cloud-drizzle.svg'
 import film from './assets/film.svg'
 import headphones from './assets/headphones.svg'
@@ -18,73 +17,92 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
 
     return (
         <div
-        className={`app__sidebar ${isExpanded ? 'expanded' : ''}`}
+        className={`app__sidebar__content ${isExpanded ? 'expanded' : ''}`}
         >
             <div
-            className='app__sidebar__logo'
+            className={`app__sidebar__content__logo ${isExpanded ? 'expanded' : ''}`}
             >
-                <img src={logo} alt='logo' />
-                <div
-                className={`app__sidebar__logo__text ${isExpanded ? 'expanded' : ''}`}
-                >
-                    Gains Gauge
-                </div>
+
             </div>
             <div
-            className='app__sidebar__dashboard'
+            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
             >
-                <img src={briefcase} alt='briefcase' />
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={briefcase}
+                alt='app__sidebar__content__collapse__icon' 
+                />
                 <div
-                className={`app__sidebar__logo__text ${isExpanded ? 'expanded' : ''}`}
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
                     Briefcase
                 </div>
             </div>
             <div
-            className='app__sidebar__cloud__drizzle'
+            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
             >
-                <img src={cloudDrizzle} alt='cloud-drizzle' />
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={cloudDrizzle}
+                alt='app__sidebar__content__collapse__icon' 
+                />
                 <div
-                className={`app__sidebar__logo__text ${isExpanded ? 'expanded' : ''}`}
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
-                    Cloud Drizzle
+                    Cloud
                 </div>
             </div>
             <div
-            className='app__sidebar__film'
+            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
             >
-                <img src={film} alt='film' />
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={film}
+                alt='app__sidebar__content__collapse__icon' 
+                />
                 <div
-                className={`app__sidebar__logo__text ${isExpanded ? 'expanded' : ''}`}
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
                     Film
                 </div>
             </div>
             <div
-            className='app__sidebar__headphones'
+            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
             >
-                <img src={headphones} alt='headphones' />
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={headphones}
+                alt='app__sidebar__content__collapse__icon' 
+                />
                 <div
-                className={`app__sidebar__logo__text ${isExpanded ? 'expanded' : ''}`}
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    // color: isExpanded ? 'var(--taupeGray)' : 'var(--chineseBlack)',
+                    color: 'var(--chineseBlack)'
+                }}
                 >
                     Headphones
                 </div>
             </div>
             <div
-            className='app__sidebar__spacer'
+            className={`app__sidebar__content__spacer ${isExpanded ? 'expanded' : ''}`}
             >
-                
+
             </div>
             <div
-            className='app__sidebar__menu__collapse'
+            className={`app__sidebar__content__collapse ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setIsExpanded(!isExpanded)}
             >
                 <img 
-                src={isExpanded ? arrowLeft : arrowRight}
-                alt='menu__collapse__icon' 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={arrowLeft}
+                style={{
+                    transform: isExpanded ? 'rotate(0deg)' : 'rotate(180deg)'
+                }}
+                alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
                     Hide Menu
                 </div>
