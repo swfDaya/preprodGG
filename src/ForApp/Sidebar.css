@@ -22,11 +22,50 @@
 .app__sidebar__logo {
     height: 50px;
     width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    /* justify-content: center; */
+    padding-left: calc(40px - 12px);
+
+    border-bottom: 0.75px solid var(--santaGrey);
+
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
-.app__sidebar__dashboard {
+.app__sidebar__logo__text {
+    /* padding-left: calc(40px - 12px); */
+    padding-left: 1rem;
+
+    opacity: 0;
+    transition: opacity 0s ease;
+}
+
+.app__sidebar__logo__text.expanded {
+    opacity: 1;
+
+    transition: opacity 1s ease;
+}
+
+/* .app__sidebar__logo.expanded {
+    justify-content: left;
+    padding-left: calc(40px - 12px);
+} */
+
+.app__sidebar__dashboard, .app__sidebar__cloud__drizzle, .app__sidebar__film, .app__sidebar__headphones {
     height: 60px;
     width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: calc(40px - 12px);
+
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .app__sidebar__spacer {
@@ -41,6 +80,33 @@
     /* background-color: lightgreen; */
     align-items: center;
     justify-content: center;
+
+    border-top: 0.75px solid var(--santaGrey);
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.app__sidebar__collapse__text {
+    /* padding-left: calc(40px - 12px); */
+    padding-left: 1rem;
+
+    width: 0px;
+
+    opacity: 0;
+    transition: opacity 0s ease;
+
+    padding: 0px;
+    margin: 0px;
+}
+
+.app__sidebar__collapse__text.expanded {
+    opacity: 1;
+
+    width: fit-content;
+
+    padding-left: 1rem;
+    transition: opacity 1s ease;
 }
 
 /* Mobile devices (up to 767px) */
@@ -86,5 +152,13 @@
 
     .app__sidebar__menu__collapse {
         display: none;
+    }
+
+    .app__sidebar__logo__text {
+        opacity: 1;
+    }
+
+    .app__sidebar__collapse__text.expanded {
+        opacity: 0;
     }
 }
