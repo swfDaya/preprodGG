@@ -36,7 +36,7 @@
     background-color: lightpink;
 }
 
-.app__sidebar__content__headphones {
+.app__sidebar__content__each {
     height: 60px;
     width: 100%;
 
@@ -47,12 +47,19 @@
     align-items: center;
     justify-content: center;
 
-    font-size: 1.1rem;
     font-weight: bold;
     color: var(--taupeGray);
 }
 
-.app__sidebar__content__headphones.expanded {
+.app__sidebar__content__each > img {
+    width: 24px;
+}
+
+.app__sidebar__content__each.expanded > img {
+    width: 18px;
+}
+
+.app__sidebar__content__each.expanded {
     justify-content: flex-start;
     /* padding-left: 1rem; */
 }
@@ -68,7 +75,7 @@
 
     /* background-color: lightblue; */
 
-    color: var(--chineseBlack);
+    color: var(--charlestonGreen);
 
     display: flex;
     flex-direction: row;
@@ -93,11 +100,17 @@
         padding-left: 1rem;
         transition: opacity 1s ease-in-out;
     }
-    .app__sidebar__content__headphones > img {
+    .app__sidebar__content__each {
+        font-size: 1rem;
+    }
+    .app__sidebar__content__each > img {
         padding-left: calc(40px - 12px);
     }
-    .app__sidebar__content__headphones.expanded > img {
+    .app__sidebar__content__each.expanded > img {
         padding-left: calc(40px - 12px);
+    }
+    .not__for__mobile {
+        display: none;
     }
 }
   
@@ -115,35 +128,62 @@
         padding-left: 1rem;
         transition: opacity 1s ease-in-out;
     }
-    .app__sidebar__content__headphones.expanded > img {
+    .app__sidebar__content__each {
+        font-size: 1.1rem;
+    }
+    .app__sidebar__content__each.expanded > img {
         padding-left: calc(40px - 12px);
+    }
+    .not__for__mobile {
+        display: flex;
     }
 }
 
 /* Desktop devices (1024px and above) */
 @media only screen and (min-width: 1024px) {
-    .app__sidebar__content__headphones {
+    .app__sidebar__content__each {
         justify-content: flex-start;
     }
-    .app__sidebar__content__headphones.expanded {
+    .app__sidebar__content__each.expanded {
         justify-content: flex-start;
     }
-    .app__sidebar__content__headphones > img {
+    .app__sidebar__content__each {
+        font-size: 1.1rem;
+    }
+    .app__sidebar__content__each > img {
         padding-left: calc(40px - 12px);
     }
-    .app__sidebar__content__headphones.expanded > img {
+    .app__sidebar__content__each.expanded > img {
         padding-left: calc(40px - 12px);
     }
-    .app__sidebar__content__collapse__text {
+    /* .app__sidebar__content__collapse__text {
         padding-left: 1rem;
     }
     .app__sidebar__content__collapse__text.expanded {
         padding-left: 1rem;
+    } */
+    .app__sidebar__content__collapse__text {
+        opacity: 0;
+        width: 0%;
+        /* padding-left: 1rem; */
+        transition: all 0s ease-in-out;
     }
-    .app__sidebar__content__collapse {
+    .app__sidebar__content__collapse__text.expanded {
+        opacity: 1;
+        width: fit-content;
+        padding-left: 1rem;
+        transition: opacity 1s ease-in-out;
+    }
+    .app__sidebar__content__each.expanded > img {
+        padding-left: calc(40px - 12px);
+    }
+    /* .app__sidebar__content__collapse {
         display: none;
     }
     .app__sidebar__content__collapse.expanded {
         display: none;
+    } */
+    .not__for__mobile {
+        display: flex;
     }
 }

@@ -63,6 +63,7 @@
   --brightGray: #EBEBEB;
   --taupeGray: #898989;
   --chineseBlack: #091225;
+  --charlestonGreen: #292929;
 }
 
 * {
@@ -74,6 +75,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cursor__pointer {
+  cursor: pointer;
 }
 
 .digits {

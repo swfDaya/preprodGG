@@ -1,12 +1,14 @@
 import './Sidebar.css'
 
-// import logo from './assets/logo.svg'
-import briefcase from './assets/briefcase.svg'
 import arrowLeft from './assets/arrow-left-circle.svg'
-// import arrowRight from './assets/arrow-right-circle.svg'
-import cloudDrizzle from './assets/cloud-drizzle.svg'
-import film from './assets/film.svg'
-import headphones from './assets/headphones.svg'
+import chart from '../assets/App/chart.svg'
+import command from '../assets/App/command.svg'
+import table from '../assets/App/table.svg'
+import users from '../assets/App/users.svg'
+import settings from '../assets/App/settings.svg'
+import fileText from '../assets/App/file-text.svg'
+import compass from '../assets/App/compass.svg'
+import dashboard from '../assets/App/dashboard.svg'
 
 interface SidebarProps {
   isExpanded: boolean;
@@ -25,63 +27,127 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
 
             </div>
             <div
-            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
+            className={`not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={briefcase}
+                src={command}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
                 className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
-                    Briefcase
+                    Daily Tracker
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
+            className={`not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={cloudDrizzle}
+                src={table}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
                 className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
-                    Cloud
+                    My Workouts
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
+            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={film}
+                src={chart}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
                 className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
                 >
-                    Film
+                    Dashboard
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__headphones ${isExpanded ? 'expanded' : ''}`}
+            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={headphones}
+                src={dashboard}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
                 className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
-                style={{
-                    // color: isExpanded ? 'var(--taupeGray)' : 'var(--chineseBlack)',
-                    color: 'var(--chineseBlack)'
-                }}
                 >
-                    Headphones
+                    Mentor Inputs
+                </div>
+            </div>
+            <div
+            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            >
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={users}
+                alt='app__sidebar__content__collapse__icon' 
+                />
+                <div
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                // style={{
+                //     // color: isExpanded ? 'var(--taupeGray)' : 'var(--charlestonGreen)',
+                //     color: 'var(--charlestonGreen)'
+                // }}
+                >
+                    Squad Activity
+                </div>
+            </div>
+            <div
+            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            >
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={compass}
+                alt='app__sidebar__content__collapse__icon' 
+                />
+                <div
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                // style={{
+                //     // color: isExpanded ? 'var(--taupeGray)' : 'var(--charlestonGreen)',
+                //     color: 'var(--charlestonGreen)'
+                // }}
+                >
+                    Explore
+                </div>
+            </div>
+            <div
+            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            >
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={fileText}
+                alt='app__sidebar__content__collapse__icon' 
+                />
+                <div
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                >
+                    Workout Database
+                </div>
+            </div>
+            <div
+            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            >
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={settings}
+                alt='app__sidebar__content__collapse__icon' 
+                />
+                <div
+                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                // style={{
+                //     // color: isExpanded ? 'var(--taupeGray)' : 'var(--charlestonGreen)',
+                //     color: 'var(--charlestonGreen)'
+                // }}
+                >
+                    Settings
                 </div>
             </div>
             <div
@@ -90,7 +156,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
 
             </div>
             <div
-            className={`app__sidebar__content__collapse ${isExpanded ? 'expanded' : ''}`}
+            className={`cursor__pointer app__sidebar__content__collapse ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setIsExpanded(!isExpanded)}
             >
                 <img 

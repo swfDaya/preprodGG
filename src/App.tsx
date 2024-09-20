@@ -1,10 +1,10 @@
 import './App.css'
 
 import command from './assets/App/command.svg'
-import dashboard from './assets/App/dashboard.svg'
 import menu from './assets/App/menu.svg'  
 import chart from './assets/App/chart.svg'
-import calendar from './assets/App/calendar.svg'
+import table from './assets/App/table.svg'
+import users from './assets/App/users.svg'
 
 import Sidebar from './ForApp/Sidebar'
 
@@ -39,22 +39,22 @@ function App() {
         <div
         className='app__footer__menu'
         >
-          <img src={dashboard} alt='dashboard__footer__icon' />
-        </div>
-        <div
-        className='app__footer__menu'
-        >
           <img src={chart} alt='chart__footer__icon' />
         </div>
         <div
         className='app__footer__menu'
         >
-          <img src={calendar} alt='calendar__footer__icon' />
+          <img src={command} alt='command__footer__icon' />
         </div>
         <div
         className='app__footer__menu'
         >
-          <img src={command} alt='command__footer__icon' />
+          <img src={table} alt='table__footer__icon' />
+        </div>
+        <div
+        className='app__footer__menu'
+        >
+          <img src={users} alt='users__footer__icon' />
         </div>
       </div>
     </div>
