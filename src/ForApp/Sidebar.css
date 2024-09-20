@@ -53,6 +53,8 @@
 
 .app__sidebar__content__each > img {
     width: 24px;
+
+    cursor: pointer;
 }
 
 .app__sidebar__content__each.expanded > img {

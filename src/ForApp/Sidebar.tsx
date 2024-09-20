@@ -1,14 +1,24 @@
 import './Sidebar.css'
 
 import arrowLeft from './assets/arrow-left-circle.svg'
-import chart from '../assets/App/chart.svg'
-import command from '../assets/App/command.svg'
-import table from '../assets/App/table.svg'
-import users from '../assets/App/users.svg'
+import dashboard from '../assets/App/chart.svg'
+import dashboardSelected from '../assets/App/dashboardSelected.svg'
+import daily from '../assets/App/command.svg'
+import dailySelected from '../assets/App/dailySelected.svg'
+import workout from '../assets/App/table.svg'
+import workoutSelected from '../assets/App/workoutSelected.svg'
 import settings from '../assets/App/settings.svg'
-import fileText from '../assets/App/file-text.svg'
+import settingsSelected from '../assets/App/settingsSelected.svg'
+import WorkoutDb from '../assets/App/file-text.svg'
+import WorkoutDbSelected from '../assets/App/workoutDbSelected.svg'
 import compass from '../assets/App/compass.svg'
-import dashboard from '../assets/App/dashboard.svg'
+import compassSelected from '../assets/App/compassSelected.svg'
+import mentor from '../assets/App/mentor.svg'
+import mentorSelected from '../assets/App/mentorSelected.svg'
+import squad from '../assets/App/users.svg'
+import squadSelected from '../assets/App/squadSelected.svg'
+
+import { useState } from 'react'
 
 interface SidebarProps {
   isExpanded: boolean;
@@ -16,6 +26,8 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
+
+    const [selectedTab, setSelectedTab] = useState('dailyTracker');
 
     return (
         <div
@@ -28,124 +40,144 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
             </div>
             <div
             className={`not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('dailyTracker')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={command}
-                alt='app__sidebar__content__collapse__icon' 
+                src={selectedTab === 'dailyTracker' ? dailySelected : daily}
+                alt='app__sidebar__content__collapse__icon'
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'dailyTracker' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Daily Tracker
                 </div>
             </div>
             <div
             className={`not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('myWorkouts')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={table}
+                src={selectedTab === 'myWorkouts' ? workoutSelected : workout}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'myWorkouts' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     My Workouts
                 </div>
             </div>
             <div
             className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('dashboard')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={chart}
+                src={selectedTab === 'dashboard' ? dashboardSelected : dashboard}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'dashboard' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Dashboard
                 </div>
             </div>
             <div
             className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('mentorInputs')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={dashboard}
+                src={selectedTab === 'mentorInputs' ? mentorSelected : mentor}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'mentorInputs' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Mentor Inputs
                 </div>
             </div>
             <div
             className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('squad')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={users}
+                src={selectedTab === 'squad' ? squadSelected : squad}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
-                // style={{
-                //     // color: isExpanded ? 'var(--taupeGray)' : 'var(--charlestonGreen)',
-                //     color: 'var(--charlestonGreen)'
-                // }}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'squad' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Squad Activity
                 </div>
             </div>
             <div
             className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('explore')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={compass}
+                src={selectedTab === 'explore' ? compassSelected : compass}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
-                // style={{
-                //     // color: isExpanded ? 'var(--taupeGray)' : 'var(--charlestonGreen)',
-                //     color: 'var(--charlestonGreen)'
-                // }}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'explore' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Explore
                 </div>
             </div>
             <div
             className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('workoutDatabase')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={fileText}
+                src={selectedTab === 'workoutDatabase' ? WorkoutDbSelected : WorkoutDb}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'workoutDatabase' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Workout Database
                 </div>
             </div>
             <div
             className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('settings')}
             >
                 <img 
                 // src={isExpanded ? arrowLeft : arrowRight}
-                src={settings}
+                src={selectedTab === 'settings' ? settingsSelected : settings}
                 alt='app__sidebar__content__collapse__icon' 
                 />
                 <div
-                className={`app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
-                // style={{
-                //     // color: isExpanded ? 'var(--taupeGray)' : 'var(--charlestonGreen)',
-                //     color: 'var(--charlestonGreen)'
-                // }}
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'settings' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
                 >
                     Settings
                 </div>
