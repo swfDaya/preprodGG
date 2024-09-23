@@ -1,0 +1,212 @@
+.pageNotFound__main {
+    height: 100%;
+    width: 100%;
+
+    /* background-color: limegreen; */
+
+    overflow: hidden;
+}
+
+/* Small devices */
+@media only screen and (max-width: 600px) {
+    .pageNotFound__main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 40svh 50px 50px 75px 1fr 2fr;
+    }
+    .pageNotFound__main__image  {
+
+    }
+    .pageNotFound__main__404 {
+        /* background-color: lightcoral; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 3rem;
+        /* font-weight: bold; */
+        /* font-style: italic; */
+
+        color: var(--blackCoral);
+    }
+    .pageNotFound__main__image > img {
+        width: 100%;
+        mix-blend-mode: multiply;
+        /* height: 100%; */
+    }
+    .pageNotFound__main__missing__header {
+        /* background-color: lightblue; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        color: var(--blackCoral);
+    }
+    .pageNotFound__main__missing__text {
+        /* background-color: lightcoral; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        font-size: 1rem;
+
+        color: var(--blackCoral);
+    }
+    .pageNotFound__main__link {
+        /* background-color: lightgreen; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+    }
+    .pageNotFound__main__link > span {
+        height: fit-content;
+        width: fit-content;
+
+        padding: 1rem 2rem;
+
+        border-radius: 0.5rem;
+
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+        font-weight: bold;
+
+        color: var(--antiWhite);
+        background-color: var(--chineseBlack);
+    }
+}
+
+/* Medium devices */
+@media only screen and (min-width: 600px) {
+    .pageNotFound__main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 40svh 50px 50px 75px 1fr 2fr;
+    }
+    .pageNotFound__main__image  {
+
+    }
+    .pageNotFound__main__404 {
+        /* background-color: lightcoral; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 3rem;
+        /* font-weight: bold; */
+        /* font-style: italic; */
+
+        color: var(--blackCoral);
+    }
+    .pageNotFound__main__image > img {
+        width: 80%;
+        mix-blend-mode: multiply;
+        /* height: 100%; */
+    }
+    .pageNotFound__main__missing__header {
+        /* background-color: lightblue; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        color: var(--blackCoral);
+    }
+    .pageNotFound__main__missing__text {
+        /* background-color: lightcoral; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.25rem;
+
+        color: var(--blackCoral);
+    }
+    .pageNotFound__main__link {
+        /* background-color: lightgreen; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.25rem;
+    }
+    .pageNotFound__main__link > span {
+        height: fit-content;
+        width: fit-content;
+
+        padding: 1rem 2rem;
+
+        border-radius: 0.5rem;
+
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+        font-weight: bold;
+
+        color: var(--antiWhite);
+        background-color: var(--chineseBlack);
+    }
+}
+
+/* Large devices */
+@media only screen and (min-width: 992px) {
+    .pageNotFound__main {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+    }
+    .pageNotFound__main__image {
+        grid-column: 2 / 8;
+        grid-row: 3 / 9;
+    }
+    .pageNotFound__main__404 {
+        grid-column: 2 / 8;
+        grid-row: 10 / 11;
+
+        /* justify-content: flex-start; */
+
+        /* padding-left: 2rem; */
+    }
+    .pageNotFound__main__image > img {
+        max-width: 100%;
+        mix-blend-mode: multiply;
+        /* height: 100%; */
+    }
+    .pageNotFound__main__missing__header {
+        grid-column: 2 / 8;
+        grid-row: 11 / 12;  
+
+        /* justify-content: flex-start; */
+
+        /* padding-left: 2rem; */
+    }
+    .pageNotFound__main__missing__text {
+        grid-column: 2 / 8;
+        grid-row: 12 / 13;
+
+        /* justify-content: flex-start; */
+
+        /* padding-left: 2rem; */
+    }
+    .pageNotFound__main__link {
+        grid-column: 2 / 8;
+        grid-row: 13 / 14;
+
+        /* align-self: flex-end; */
+        /* justify-content: center; */
+
+        /* padding-left: 2rem; */
+    }
+}

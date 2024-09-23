@@ -11,6 +11,8 @@
 }
 
 .app__sidebar {
+  position: fixed;
+
   height: 100%;
 
   background-color: white;
@@ -65,7 +67,7 @@
   }
 
   .app__sidebar {
-    position: relative;
+    /* position: relative; */
     left: -250px;
     top: 0;
     width: 250px;
@@ -91,7 +93,7 @@
   }
   .app__sidebar {
     width: 80px;
-    position: relative;
+    /* position: relative; */
     transition: all 0.3s ease-in-out;
     z-index: 100;
   }
@@ -116,7 +118,7 @@
   } */
   .app__sidebar {
     width: 80px;
-    position: relative;
+    /* position: relative; */
     transition: all 0.3s ease-in-out;
     z-index: 100;
   }

@@ -13,6 +13,7 @@ import squadSelected from './assets/App/squadSelected.svg'
 import Sidebar from './ForApp/Sidebar'
 
 import { useState } from 'react'
+import Container from './Pages/Container'
 
 function App() {
 
@@ -31,9 +32,7 @@ function App() {
         setIsExpanded={setIsExpanded} 
         />
       </div>
-      <div className='app__container'>
-
-      </div>
+      <Container />
       <div
       className='app__footer'
       >

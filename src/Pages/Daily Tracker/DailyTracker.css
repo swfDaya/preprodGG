@@ -1,0 +1,93 @@
+.daily__tracker__main {
+    height: 100%;
+    width: 100%;
+
+    /* background-color: lightgreen; */
+}
+
+.daily__tracker__main {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.daily__tracker__image__main {
+    height: 50%;
+    width: 100%;
+
+    /* background-color: lightcoral; */
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    overflow: hidden;
+}
+
+.daily__tracker__image__main > img {
+    grid-column: 1 / 9;
+    grid-row: 1 / 9;
+
+    overflow: hidden;
+    
+}
+
+.daily__tracker__image__main > img {
+    grid-column: 1 / 9;
+    grid-row: 1 / 9;
+
+    overflow: hidden;
+
+    height: 100%;
+    width: 100%;
+
+    object-fit: contain;
+
+    mix-blend-mode: multiply;
+}
+
+.daily__tracker__button__main {
+    height: 100px;
+    width: 100%;
+
+    /* background-color: lightblue; */
+}
+
+.daily__tracker__button__main > span {
+    /* font-size: 1.5rem; */
+    /* font-weight: bold; */
+
+    letter-spacing: 0.2rem;
+
+    background-color: var(--chineseBlack);
+    color: var(--antiWhite);
+
+    padding: 1rem 2rem;
+
+    border-radius: 0.5rem;
+
+    font-style: italic;
+}
+
+/* Small devices */
+@media only screen and (max-width: 600px) {
+    .daily__tracker__button__main > span {
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices */
+@media only screen and (min-width: 600px) {
+    .daily__tracker__button__main > span {
+        font-size: 1rem;
+    }
+}
+
+/* Large devices */
+@media only screen and (min-width: 992px) {
+    .daily__tracker__button__main > span {
+        font-size: 1.5rem;
+    }
+}

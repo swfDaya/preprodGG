@@ -111,6 +111,9 @@
     .app__sidebar__content__each.expanded > img {
         padding-left: calc(40px - 12px);
     }
+    .not__for__mobile__and__pc {
+        display: none;
+    }
     .not__for__mobile {
         display: none;
     }
@@ -135,6 +138,9 @@
     }
     .app__sidebar__content__each.expanded > img {
         padding-left: calc(40px - 12px);
+    }
+    .not__for__mobile__and__pc {
+        display: flex;
     }
     .not__for__mobile {
         display: flex;
@@ -185,6 +191,9 @@
     .app__sidebar__content__collapse.expanded {
         display: none;
     } */
+    .not__for__mobile__and__pc {
+        display: none;
+    }
     .not__for__mobile {
         display: flex;
     }

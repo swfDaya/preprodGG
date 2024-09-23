@@ -27,7 +27,7 @@ interface SidebarProps {
 
 const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
 
-    const [selectedTab, setSelectedTab] = useState('dailyTracker');
+    const [selectedTab, setSelectedTab] = useState('dashboard');
 
     return (
         <div
@@ -39,43 +39,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
 
             </div>
             <div
-            className={`not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
-            onClick={() => setSelectedTab('dailyTracker')}
-            >
-                <img 
-                // src={isExpanded ? arrowLeft : arrowRight}
-                src={selectedTab === 'dailyTracker' ? dailySelected : daily}
-                alt='app__sidebar__content__collapse__icon'
-                />
-                <div
-                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
-                style={{
-                    color: selectedTab === 'dailyTracker' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
-                }}
-                >
-                    Daily Tracker
-                </div>
-            </div>
-            <div
-            className={`not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
-            onClick={() => setSelectedTab('myWorkouts')}
-            >
-                <img 
-                // src={isExpanded ? arrowLeft : arrowRight}
-                src={selectedTab === 'myWorkouts' ? workoutSelected : workout}
-                alt='app__sidebar__content__collapse__icon' 
-                />
-                <div
-                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
-                style={{
-                    color: selectedTab === 'myWorkouts' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
-                }}
-                >
-                    My Workouts
-                </div>
-            </div>
-            <div
-            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setSelectedTab('dashboard')}
             >
                 <img 
@@ -93,7 +57,43 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('dailyTracker')}
+            >
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={selectedTab === 'dailyTracker' ? dailySelected : daily}
+                alt='app__sidebar__content__collapse__icon'
+                />
+                <div
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'dailyTracker' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
+                >
+                    Daily Tracker
+                </div>
+            </div>
+            <div
+            className={`noSelect not__for__mobile app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            onClick={() => setSelectedTab('myWorkouts')}
+            >
+                <img 
+                // src={isExpanded ? arrowLeft : arrowRight}
+                src={selectedTab === 'myWorkouts' ? workoutSelected : workout}
+                alt='app__sidebar__content__collapse__icon' 
+                />
+                <div
+                className={`cursor__pointer app__sidebar__content__collapse__text ${isExpanded ? 'expanded' : ''}`}
+                style={{
+                    color: selectedTab === 'myWorkouts' ? 'var(--charlestonGreen)' : 'var(--taupeGray)',
+                }}
+                >
+                    My Workouts
+                </div>
+            </div>
+            <div
+            className={`noSelect app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setSelectedTab('mentorInputs')}
             >
                 <img 
@@ -111,7 +111,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setSelectedTab('squad')}
             >
                 <img 
@@ -129,7 +129,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setSelectedTab('explore')}
             >
                 <img 
@@ -147,7 +147,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setSelectedTab('workoutDatabase')}
             >
                 <img 
@@ -165,7 +165,7 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect app__sidebar__content__each ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setSelectedTab('settings')}
             >
                 <img 
@@ -183,12 +183,12 @@ const Sidebar = ({ isExpanded, setIsExpanded }: SidebarProps) => {
                 </div>
             </div>
             <div
-            className={`app__sidebar__content__spacer ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect app__sidebar__content__spacer ${isExpanded ? 'expanded' : ''}`}
             >
 
             </div>
             <div
-            className={`cursor__pointer app__sidebar__content__collapse ${isExpanded ? 'expanded' : ''}`}
+            className={`noSelect cursor__pointer app__sidebar__content__collapse ${isExpanded ? 'expanded' : ''}`}
             onClick={() => setIsExpanded(!isExpanded)}
             >
                 <img 
